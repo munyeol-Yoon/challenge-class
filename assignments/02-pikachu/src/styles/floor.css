@@ -1,0 +1,10 @@
+.floor {
+  display: grid;
+  grid-template-columns: repeat(10, 50px);
+  grid-template-rows: repeat(10, 50px);
+}
+
+.floor > .cell {
+  background-image: url("../assets/images/grass.png");
+  background-size: cover;
+}
