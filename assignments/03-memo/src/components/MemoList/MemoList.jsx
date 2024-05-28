@@ -13,7 +13,7 @@ function MemoList() {
   };
 
   const handleClickDeleteMemo = () => {
-    if (memos.length === 1) {
+    if (memos.memos.length <= 1) {
       alert("하나 이상의 메모는 남겨두어야 합니다.");
       return;
     }
