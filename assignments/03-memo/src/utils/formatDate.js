@@ -24,7 +24,7 @@ export const dateFormatter = (timestamp) => {
   const formattedDate = `${year}년 ${month}월 ${day}일, `;
   const formattedTime = `${period} ${hours}:${min}`;
   return {
-    koreaDate: formattedDate,
+    koreaDate: formattedDate + formattedTime,
     koreaTime: formattedTime,
   };
 };

@@ -39,6 +39,16 @@ export const memoReducer = (prevState = initialState, action) => {
         selectMemoId: action.payload.memoId,
       };
 
+    case UPDATE_MEMO:
+      return {
+        ...prevState,
+        memos: prevState.memos.map((memo) =>
+          memo.id === action.payload.memoId
+            ? { ...memo, content: action.payload.content }
+            : memo
+        ),
+      };
+
     case DELETE_MEMO:
       const updatedMemos = prevState.memos.filter(
         (memo) => memo.id !== prevState.selectMemoId
@@ -53,6 +63,6 @@ export const memoReducer = (prevState = initialState, action) => {
         memos: updatedMemos,
       };
     default:
-      return prevState;
+      return { ...prevState };
   }
 };
