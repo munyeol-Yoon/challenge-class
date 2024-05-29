@@ -32,6 +32,7 @@ export function ModalProvider({ children }) {
     },
   };
 
+  // useEffect 사용허쉴~?
   return (
     <ModalContext.Provider value={value}>
       {children}
