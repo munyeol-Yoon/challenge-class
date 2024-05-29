@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { GET_MEMO } from "../../redux/reducers/memo.reducer";
 import { dateFormatter } from "../../utils/formatDate";
 
-const MAX_TITLE_LENGTH = 20;
+const MAX_TITLE_LENGTH = 14;
 
 const createTitle = (title) => {
   const firstLine = title.trim();
