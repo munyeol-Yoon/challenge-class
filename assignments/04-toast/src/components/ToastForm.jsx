@@ -4,7 +4,7 @@ import Input from "./Input";
 
 function ToastForm() {
   const toast = useToast();
-  console.log("toast form render");
+
   const [inputs, setInputs] = useState({
     title: "Scheduled: Catch up",
     content: "Friday, February 10, 2023 at 5:57 PM",
