@@ -50,12 +50,7 @@
 
 // export default Chip;
 
-import { cva } from "class-variance-authority";
-
-interface ChipProps {
-  label: string;
-  intent?: "primary" | "secondary" | "danger" | "warning" | "info" | "default";
-}
+import { VariantProps, cva } from "class-variance-authority";
 
 const chipVariants = cva(
   [
@@ -84,6 +79,12 @@ const chipVariants = cva(
     },
   }
 );
+
+type ChipVariantsType = VariantProps<typeof chipVariants>;
+
+type ChipProps = {
+  label: string;
+} & ChipVariantsType;
 
 function Chip({ label, intent }: ChipProps) {
   return <div className={`${chipVariants({ intent })}`}>{label}</div>;
