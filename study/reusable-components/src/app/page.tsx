@@ -1,14 +1,53 @@
-import Chip from "@/components/Chip";
+"use client";
+
+import Button from "@/components/Button";
 
 export default function Home() {
   return (
     <div className="h-screen flex flex-col items-center justify-center gap-y-4">
-      <Chip label="Primary" intent="primary" />
+      {/** Chip */}
+      {/* <Chip label="Primary" intent="primary" />
       <Chip label="Secondary" intent="secondary" />
       <Chip label="Danger" intent="danger" />
       <Chip label="Warning" intent="warning" />
       <Chip label="Info" intent="info" />
-      <Chip label="Default" />
+      <Chip label="Default" /> */}
+      <Button intent="primary" size="sm" onClick={() => alert("hi")}>
+        Primary
+      </Button>
+      <Button intent="primary" size="md">
+        Primary
+      </Button>
+      <Button intent="primary" size="lg">
+        Primary
+      </Button>
+      <Button intent="primary" size="lg" variant="outline">
+        Primary
+      </Button>
+      <Button intent="secondary" size="sm">
+        Secondary
+      </Button>
+      <Button intent="secondary" size="md">
+        Secondary
+      </Button>
+      <Button intent="secondary" size="lg">
+        Secondary
+      </Button>
+      <Button intent="secondary" size="lg" variant="outline">
+        Secondary
+      </Button>
+      <Button intent="danger" size="sm">
+        Danger
+      </Button>
+      <Button intent="danger" size="md">
+        Danger
+      </Button>
+      <Button intent="danger" size="lg">
+        Danger
+      </Button>
+      <Button intent="danger" size="lg" variant="outline">
+        Danger
+      </Button>
     </div>
   );
 }
